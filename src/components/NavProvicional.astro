@@ -1,0 +1,62 @@
+---
+import MyImg from "../img/p4.webp";
+---
+
+<div class="flex place-content-evenly w-screen mt-5 items-center">
+  <div>
+    <a href="/" class="aLog">
+      <img src={MyImg.src} alt="logo-img" class="w-[5rem]" /></a
+    >
+  </div>
+  <div>
+    <nav class="m-auto">
+      <i class="text-nowrap">
+        <ul class="">
+          <a class="mx-6 not-italic" href="/acerca">Acerca de</a>
+          <a class="mx-6 not-italic" href="">Como trabajamos?</a>
+          <a class="mx-6 not-italic" href="">Características</a>
+          <a class="mx-6 not-italic" href="">Contacto</a>
+        </ul>
+      </i>
+    </nav>
+  </div>
+  <div>
+    <button
+      type="button"
+      class="border-[2px] border-[#00A99D] p-[0.4rem] rounded-lg"
+      ><span>Trabaja con nosotros</span></button
+    >
+  </div>
+</div>
+<style>
+  button:hover {
+    border-color: #662d91;
+    transition: border-color 0.5s ease, color 0.5s ease;
+  }
+  span:hover {
+    transition: 0.5s ease, color 0.5s ease;
+  }
+  a {
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Quicksand", sans-serif;
+    position: relative;
+  }
+  a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #662d91;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after {
+    width: 100%;
+    left: 0;
+    font-weight: bold !important;
+  }
+</style>

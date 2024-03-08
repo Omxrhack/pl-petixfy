@@ -5,6 +5,8 @@ interface Props {
 
 const { title } = Astro.props;
 import IconP from "../img/icon.webp";
+import NavProvicional from "../components/NavProvicional.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!DOCTYPE html>
@@ -21,14 +23,15 @@ import IconP from "../img/icon.webp";
       rel="stylesheet"
     />
     <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
     <title>{title}</title>
   </head>
   <body>
+    <NavProvicional />
     <slot />
-  </body>
+  </body><style>
+    html {
+      height: -webkit-fill-available;
+    }
+  </style>
 </html>
-<style>
-  html {
-    height: -webkit-fill-available;
-  }
-</style>

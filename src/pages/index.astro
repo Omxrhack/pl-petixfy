@@ -1,45 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import MyImg from "../img/p4.webp";
+
 import MyMk from "../img/mejorada.webp";
 ---
 
 <Layout title="Bienvenido a Petixfy">
-  <header>
-    <div class="flex place-content-evenly w-screen mt-5 items-center">
-      <div>
-        <a href="" class="aLog">
-          <img src={MyImg.src} alt="logo-img" class="w-[5rem]" /></a
-        >
-      </div>
-      <div>
-        <nav class="m-auto">
-          <i class="text-nowrap">
-            <ul class="">
-              <a class="mx-6 not-italic" href="">Acerca de</a>
-              <a class="mx-6 not-italic" href="">Como trabajamos?</a>
-              <a class="mx-6 not-italic" href="">Características</a>
-              <a class="mx-6 not-italic" href="">Contacto</a>
-            </ul>
-          </i>
-        </nav>
-      </div>
-      <div>
-        <button
-          type="button"
-          class="border-[2px] border-[#00A99D] p-[0.4rem] rounded-lg"
-          ><span>Trabaja con nosotros</span></button
-        >
-      </div>
-    </div>
-  </header>
   <main class="mx-16 grid h-[80vh] items-center">
     <section class="grid items-center">
       <div
         class="grid grid-flow-col place-content-evenly h-max relative z-[99] items-center"
       >
         <div class="px-11">
-          <h1 class="text-8xl font-bold">
+          <h1 class="text-8xl font-bold text-left delay-500">
             Dejando <span class="text-[#662D91]">huella</span> hasta la puerta de
             tu
             <span class="text-[#00A99D]">casa</span>.
@@ -49,7 +21,13 @@ import MyMk from "../img/mejorada.webp";
           </div>
         </div>
         <div>
-          <img src={MyMk.src} alt="hero-im" class="w-[100%]" />
+          <img
+            src={MyMk.src}
+            alt="hero-im"
+            class="w-[100%]"
+            decoding="async"
+            loading="lazy"
+          />
         </div>
       </div>
       <div
@@ -63,39 +41,3 @@ import MyMk from "../img/mejorada.webp";
     </section>
   </main>
 </Layout>
-<style>
-  span {
-    font-family: "Quicksand", sans-serif;
-    font-weight: 500;
-  }
-  button:hover {
-    border-color: #662d91;
-    transition: border-color 0.5s ease, color 0.5s ease;
-  }
-  span:hover {
-    transition: 0.5s ease, color 0.5s ease;
-  }
-  a {
-    text-decoration: none;
-    display: inline-block;
-    font-family: "Quicksand", sans-serif;
-    position: relative;
-  }
-  a:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #662d91;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-  }
-  a:hover:after {
-    width: 100%;
-    left: 0;
-    font-weight: bold !important;
-  }
-</style>
